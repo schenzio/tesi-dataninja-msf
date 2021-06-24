@@ -1,11 +1,13 @@
 import $ from 'jquery';
-// Import stylesheets
 import './style.css';
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
 var logoIndex: HTMLCollection = document.getElementsByClassName('chap');
 var index: Array<string> = ['intro', 'sezione1', 'sezione2', 'sezione3'];
+var homeH: number = ($("#home").height());
+var s0: number = homeH +($("#section0").height()+($("nav").height()));
+var s1: number = s0 +($("#section1").height());
+var s2: number = s1 +($("#section2").height());
+var s3: number = s2 + ($("#section3").height());
 
 function focus(id: string) {
   $('#'+id).css({fill: '#eb836a'});
@@ -19,7 +21,8 @@ function defocus(id: string){
     }
     $('#chap'+id).css({color: 'black', fontWeight: 'normal'});
 }
-$('#3').css({fill: 'white'});
+
+$('circle').css({fill: 'white'});
 for (let i = 0; i < logoIndex.length; i++) {
   let logoPart = logoIndex[i];
   var navChap = $("<a class='navPoint' href='#section"+i+"' id='chap"+i+"'>"+index[i]+"</a>");
@@ -36,12 +39,29 @@ for (let i = 0; i < logoIndex.length; i++) {
   );
 }
 $(document).on("scroll", function() {
-let homeH = ($("#home").height());
-if($(document).scrollTop() > homeH){
+let pxScrolled = $(document).scrollTop();
+if(pxScrolled > homeH){
   $('#up').show();
-  $('nav').css({ position:'fixed', top: 0});
+  $('#s3').css({fill: 'white'});
+  if(pxScrolled < homeH+s0){
+    $(".logoBack").css({fill: '#880606'});
+    $('#s0').css({fill: '#eb836a'});
+  }
+  else if (pxScrolled< s1) {
+  $(".logoBack").css({fill: '#880606'});
+  $('#s1').css({fill: '#eb836a'});
+  
+  }
+  else if (pxScrolled< s2) {
+    $(".logoBack").css({fill: '#880606'});
+    $('#s2').css({fill: '#eb836a'});
+    } 
+  else if (pxScrolled< s3) {
+    $(".logoBack").css({fill: '#880606'});
+    $('#s3').css({fill: '#eb836a'});
+  }   
 } else {
   $('#up').hide();
-  $('nav').css({ position:'static'});
+  $(".logoBack").css({fill: '#880606'});
 }; 
 })

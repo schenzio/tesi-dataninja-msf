@@ -22,6 +22,10 @@
 html{
   scroll-behavior: smooth;
 }
+#app-container{
+  display: flex;
+  flex-direction: column;
+}
 #home{
   margin: 3%;
 }
@@ -46,7 +50,9 @@ nav {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 95%;
-  position: fixed;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
   /*margin-top: 2%;
   background-color:#d7232a;*/
   }
@@ -66,13 +72,11 @@ svg#up:hover{
   fill:#eb836a;
 }
 /*scroll-story*/
-#scroll-story{
-  padding: 10%;
-}
 section{
   padding-top: 5%;
   font-size: 1.3em;
   line-height: 1.5em;
+  z-index: 100;
 }
 h2{
   font-size: 2.3em;
@@ -94,18 +98,20 @@ h2{
 }*/
 .viz{
   margin: 3%;
+  z-index: 500;
 }
-.logoPeaces{
-  display: inline;
-  margin-top: -30%;
+.logoBack{
+  fill:#880606;
+}
+#logoBackground{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  margin-left: 60%;
+  top:10vh;
+  z-index: 1;
+  /*margin-top: -30%;
   margin-left: 20%;
-  opacity: 0.7;
-}
-.other{
-  fill:rgb(99, 5, 5)
-}
-.main{
-  fill:hsl(358, 72%, 49%);
+  opacity: 0.7;*/
 }
 footer{
   background-color: #d7232a;
