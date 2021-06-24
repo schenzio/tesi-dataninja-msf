@@ -43,25 +43,26 @@ let pxScrolled = $(document).scrollTop();
 if(pxScrolled > homeH){
   $('#up').show();
   $('#s3').css({fill: 'white'});
-  if(pxScrolled < homeH+s0){
-    $(".logoBack").css({fill: '#880606'});
+  if(pxScrolled < s0){
+    $(".logoBack").css({fill: '#d7232a'});
     $('#s0').css({fill: '#eb836a'});
   }
   else if (pxScrolled< s1) {
-  $(".logoBack").css({fill: '#880606'});
+  $(".logoBack").css({fill: '#d7232a'});
   $('#s1').css({fill: '#eb836a'});
   
   }
   else if (pxScrolled< s2) {
-    $(".logoBack").css({fill: '#880606'});
+    $(".logoBack").css({fill: '#d7232a'});
     $('#s2').css({fill: '#eb836a'});
     } 
-  else if (pxScrolled< s3) {
-    $(".logoBack").css({fill: '#880606'});
+  //else if (pxScrolled< s3) {
+  else{
+    $(".logoBack").css({fill: '#d7232a'});
     $('#s3').css({fill: '#eb836a'});
   }   
 } else {
   $('#up').hide();
-  $(".logoBack").css({fill: '#880606'});
+  $(".logoBack").css({fill: '#d7232a'});
 }; 
 })

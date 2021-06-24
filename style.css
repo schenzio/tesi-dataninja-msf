@@ -22,6 +22,9 @@
 html{
   scroll-behavior: smooth;
 }
+body{
+  margin: 0;
+}
 #app-container{
   display: flex;
   flex-direction: column;
@@ -29,7 +32,7 @@ html{
 #home{
   margin: 3%;
 }
-.chap{
+.chap, .logoBack{
   fill:#d7232a;
 }
 
@@ -100,13 +103,12 @@ h2{
   margin: 3%;
   z-index: 500;
 }
-.logoBack{
-  fill:#880606;
-}
+
 #logoBackground{
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  margin-left: 60%;
+  margin-left: 2%;
+  width: 50%;
   top:10vh;
   z-index: 1;
   /*margin-top: -30%;
@@ -114,6 +116,7 @@ h2{
   opacity: 0.7;*/
 }
 footer{
+  text-align: center;
   background-color: #d7232a;
   color: white;
   font-size: inherit;
@@ -121,5 +124,4 @@ footer{
 footer li{
   list-style-type: none;
   margin: 2%;
-  text-align: center;
 }
