@@ -49,7 +49,9 @@ body{
 .chap, .logoBack{
   fill:#d7232a;
 }
-
+h2{
+  font-family: inherit;
+}
 #line{
   fill:#dc3e44;
 }
@@ -107,12 +109,12 @@ section{
   padding-top: 8%;
   padding-left: 20%;
   padding-right: 20%;
-}
+}/*
 h1{
   text-align: center;
   margin: 1%;
 }
-
+*/
 .viz{
   z-index: 500;
 }
