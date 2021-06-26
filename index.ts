@@ -7,25 +7,7 @@ var index: Array<string> = ['Curarsi senza documenti', 'Burocrazia portami via',
 
 function focus(id: string) {
   $('#'+id).css({fill: '#eb836a'});
-  $('#chap'+id).css({/*color: '#eb836a',*/ fontWeight: 'bold'});
-
-
-  var home: number = ($("#home").height());
-  var nav = ($("nav").height());//+($("#logoBackground").height());
-  var s0: number = ($("#section0").height());
-  var s1: number = ($("#section1").height());
-  var s2: number = ($("#section2").height());
-  var s3: number = ($("#section3").height());
-  var logo =($("#logoBackground").height()); 
-  var footer = ($("footer").height());
-  var col = ($("#textColumn").height());
-  var up = ($("#up").height());
-  var storia = ($("#scroll-story").height());
-  console.log('pag',($(document).height()));
-  console.log('sum:', home+nav+col+logo+up+footer);
-  //console.log('div',($('#app-container').height()));
-  console.log('col+nav:', home+storia+footer);
-  //console.log('col+nav:', home+storia+footer)
+  $('#chap'+id).css({backgroundColor: '#eb836a', fontWeight: 'bold'});
 
 }
 function defocus(id: string){
@@ -34,10 +16,12 @@ function defocus(id: string){
     } else {
       $('#'+id).css({fill: '#d7232a'});
     }
-    $('#chap'+id).css({/*color: 'white',*/ fontWeight: 'normal'});
+    $('#chap'+id).css({backgroundColor: '#d7232a',  fontWeight: 'normal'});
 }
 $('#up').hide();
 $('circle').css({fill: '#d8efef'});
+
+
 for (let i = 0; i < logoIndex.length; i++) {
   let logoPart = logoIndex[i];
   var navChap = $("<a class='navPoint' href='#section"+i+"' id='chap"+i+"'>"+index[i]+"</a>");
@@ -53,8 +37,20 @@ for (let i = 0; i < logoIndex.length; i++) {
     () => defocus(logoPart.id),
   );
 }
+
+
+$(document).ready(function(){
+  $('#0').css({'animation': 'load0 4s'});
+  //$('#chap0').animate({opacity: 0.5}, "fast");
+  setTimeout(() => {$('#1').css({'animation': 'load 4s'})}, 4000);
+  setTimeout(() => {$('#2').css({'animation': 'load 4s'})}, 8000); 
+  setTimeout(() => {$('#3').css({'animation': 'load 4s'})}, 12000);  
+  });
+
+
+
 $(document).on("scroll", function() {
-  var homeH: number = ($("#home").height())+($("nav").height());//+($("#logoBackground").height());
+  var homeH: number = ($("#home").height())+($("nav").height());
   var s0: number = homeH +($("#section0").height());
   var s1: number = s0 +($("#section1").height());
   var s2: number = s1 +($("#section2").height());
@@ -67,6 +63,7 @@ $(document).on("scroll", function() {
     if(pxScrolled <= s0){
       $(".logoBack").css({fill: '#d7232a'});
       $('#s0').css({fill: '#eb836a'});
+     
     }
     else if (pxScrolled>s0 && pxScrolled<= s1) {
       $(".logoBack").css({fill: '#d7232a'});
