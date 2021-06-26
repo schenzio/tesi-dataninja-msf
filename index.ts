@@ -37,14 +37,22 @@ for (let i = 0; i < logoIndex.length; i++) {
     () => defocus(logoPart.id),
   );
 }
-
+function show(id: string){
+  $('#'+id).css({'animation': 'load 4s'});
+  $('#chap'+id).fadeIn(4000);
+}
 
 $(document).ready(function(){
-  $('#0').css({'animation': 'load0 4s'});
-  //$('#chap0').animate({opacity: 0.5}, "fast");
-  setTimeout(() => {$('#1').css({'animation': 'load 4s'})}, 4000);
-  setTimeout(() => {$('#2').css({'animation': 'load 4s'})}, 8000); 
-  setTimeout(() => {$('#3').css({'animation': 'load 4s'})}, 12000);  
+  $('.navPoint').hide();
+  //$('.chap').css({opacity: 0});
+  //$('#0').css({'animation': 'load 1s'});
+  //$('#chap0').animate({opacity: 1}, 4000);
+  show('0');
+  setTimeout(() => show('1'), 4000);
+  setTimeout(() => show('2'), 8000);
+  setTimeout(() => show('3'), 12000);
+  //setTimeout(() => {$('#2').css({'animation': 'load 4s'})}, 8000); 
+  //setTimeout(() => {$('#3').css({'animation': 'load 4s'})}, 12000);  
   });
 
 

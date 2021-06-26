@@ -43,6 +43,7 @@ body{
   margin: 3%;
   font-style: italic;
 }
+
 .chap, .logoBack{
   fill:#d7232a;
   
@@ -83,9 +84,8 @@ div#guide {
 }
 nav {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: stretch;
+  /*flex-wrap: wrap;*/
+  align-items: left;
   background-color: #d7232a;
   position: -webkit-sticky; /* Safari */
   position: sticky;
@@ -201,14 +201,12 @@ footer li{
   list-style-type: none;
   margin: 2%;
 }
-@keyframes load0 {
-  50%{fill: #eb836a;}
-  100%{fill:#d8efef;}
-}
 @keyframes load {
-  50%{fill: #eb836a;}
-  100%{fill: #d7232a}
+  0%{opacity: 0;} 
+  50%{opacity: 0.5;}
+  100%{opacity: 1}
 }
+/*
 .navPoint::before {
   display: none;
   content: "";
@@ -217,4 +215,4 @@ footer li{
   border-width: 10px;
   border-style: solid;
   border-color: hsl(246, 67%, 24%) transparent transparent transparent;
-}
+}*/
