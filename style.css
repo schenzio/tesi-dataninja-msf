@@ -86,7 +86,7 @@ nav {
   display: flex;
   /*flex-wrap: wrap;*/
   align-items: left;
-  background-color: #d7232a;
+  
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -95,7 +95,7 @@ nav {
 .navPoint{
   color: white;
   text-decoration: none;
-  background-color: inherit;
+  background-color: #d7232a;
   width: 25%;
   padding: 1.8% 0;
   text-align: center;

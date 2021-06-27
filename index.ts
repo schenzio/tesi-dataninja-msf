@@ -11,16 +11,14 @@ function focus(id: string) {
 
 }
 function defocus(id: string){
-    if(id == '0'){
+    /*if(id == '0'){
       $('#'+id).css({fill: '#d8efef'});
     } else {
       $('#'+id).css({fill: '#d7232a'});
-    }
+    }*/
+    $('#'+id).css({fill: '#d7232a'});
     $('#chap'+id).css({backgroundColor: '#d7232a',  fontWeight: 'normal'});
 }
-$('#up').hide();
-$('circle').css({fill: '#d8efef'});
-
 
 for (let i = 0; i < logoIndex.length; i++) {
   let logoPart = logoIndex[i];
@@ -38,12 +36,13 @@ for (let i = 0; i < logoIndex.length; i++) {
   );
 }
 function show(id: string){
-  $('#'+id).css({'animation': 'load 4s'});
+  $('#'+id).fadeIn(4000);///css({'animation': 'load 4s'});
   $('#chap'+id).fadeIn(4000);
 }
+$('#up, .navPoint, .chap').hide();
+$('circle').css({fill: '#d8efef'});
 
 $(document).ready(function(){
-  $('.navPoint').hide();
   //$('.chap').css({opacity: 0});
   //$('#0').css({'animation': 'load 1s'});
   //$('#chap0').animate({opacity: 1}, 4000);
