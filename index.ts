@@ -7,8 +7,7 @@ var index: Array<string> = ['Curarsi senza documenti', 'Burocrazia portami via',
 
 function focus(id: string) {
   $('#'+id).css({fill: '#eb836a'});
-  $('#chap'+id).css({backgroundColor: '#eb836a', fontWeight: 'bold'});
-
+  $('#chap'+id).css({backgroundColor: '#eb836a', fontWeight: 'bold'})
 }
 function defocus(id: string){
     /*if(id == '0'){
@@ -36,22 +35,29 @@ for (let i = 0; i < logoIndex.length; i++) {
   );
 }
 function show(id: string){
-  $('#'+id).fadeIn(4000);///css({'animation': 'load 4s'});
-  $('#chap'+id).fadeIn(4000);
+  //pezzi logo uno per volta
+  $('#'+id+', #chap'+id).fadeIn(3000);
+  //pezzi logo già presenti si illuminano
+  //$('#'+id).css({'animation': 'load 3s'});
+  //$('#chap'+id).fadeIn(3000);
 }
 $('#up, .navPoint, .chap').hide();
+//$('#up, .navPoint').hide();
 $('circle').css({fill: '#d8efef'});
+//$('.note').click(function(){$('#note1').css({display: 'block'})});
+$('.close').click(function(){$('#note1').fadeOut()});
+$('.note').click(function(){$('#note1').fadeIn()});
+
 
 $(document).ready(function(){
   //$('.chap').css({opacity: 0});
   //$('#0').css({'animation': 'load 1s'});
   //$('#chap0').animate({opacity: 1}, 4000);
   show('0');
-  setTimeout(() => show('1'), 4000);
-  setTimeout(() => show('2'), 8000);
-  setTimeout(() => show('3'), 12000);
-  //setTimeout(() => {$('#2').css({'animation': 'load 4s'})}, 8000); 
-  //setTimeout(() => {$('#3').css({'animation': 'load 4s'})}, 12000);  
+  setTimeout(() => show('1'), 3000);
+  setTimeout(() => show('2'), 6000);
+  setTimeout(() => show('3'), 9000);
+  //$('#guide').animate({left: '10%'});
   });
 
 
