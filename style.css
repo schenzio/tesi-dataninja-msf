@@ -167,9 +167,9 @@ sup{
 
 
 .modal{
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   left: 0;
   top: 0;
   width: 100%; 
@@ -183,7 +183,7 @@ sup{
   background-color: #fefefe;
   margin: 40% auto; 
   padding: 3%;
-  border: 1px solid #888;
+  border: 3px solid #d7232a;
   width: 80%; 
 }
 .close {
@@ -211,16 +211,7 @@ footer li{
   margin: 2%;
 }
 @keyframes load {
-  50%{fill: #f0a645}
-  100%{fill: #d7232a}
+  0% {position: fixed; top: 50%; right: 10%;}
+  50%{position: relative; bottom: 50%}
+  100%{position: static}
 }
-/*
-.navPoint::before {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -5px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: hsl(246, 67%, 24%) transparent transparent transparent;
-}*/

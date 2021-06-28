@@ -38,11 +38,11 @@ function show(id: string){
   //pezzi logo uno per volta
   $('#'+id+', #chap'+id).fadeIn(3000);
   //pezzi logo già presenti si illuminano
-  //$('#'+id).css({'animation': 'load 3s'});
+  $('#chap'+id).css({'animation': 'load 3s'});
   //$('#chap'+id).fadeIn(3000);
 }
-$('#up, .navPoint, .chap').hide();
-//$('#up, .navPoint').hide();
+//$('#up, .navPoint, .chap').hide();
+$('#up, .navPoint').hide();
 $('circle').css({fill: '#d8efef'});
 //$('.note').click(function(){$('#note1').css({display: 'block'})});
 $('.close').click(function(){$('#note1').fadeOut()});
