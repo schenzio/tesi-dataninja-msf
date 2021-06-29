@@ -2,7 +2,7 @@ import $ from 'jquery';
 import './style.css';
 
 var logoIndex: HTMLCollection = document.getElementsByClassName('chap');
-var index: Array<string> = ['Curarsi senza documenti', 'Burocrazia portami via', 'Salute universale ma...', 'E adesso?'];
+var index: Array<string> = ['curarsi senza documenti', 'Burocrazia portami via', 'Salute universale ma...', 'E adesso?'];
 
 
 function focus(id: string) {
