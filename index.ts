@@ -105,7 +105,7 @@ $(document).on("scroll", function() {
       $(".logoBack").css({fill: '#d7232a'});
       $('#s2').css({fill: '#eb836a'});
     } 
-    else if (pxScrolled>s2 && pxScrolled<= s3) {
+    else if (pxScrolled>s2) {
       $(".logoBack").css({fill: '#d7232a'});
       $('#s3').css({fill: '#eb836a'});
     }   
