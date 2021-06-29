@@ -141,7 +141,7 @@ p{
 }
 
 .viz{
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 5%;
   z-index: 500;
 }
@@ -154,11 +154,21 @@ p{
   padding: 1.8%;
   z-index: 1;
 }
+.slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.2.em;
+}
+.slider input{
+  margin: .4rem;
+}
+
 .note{
   position: relative;
   cursor: pointer;
   color: #d7232a;
- 
 }
 sup{
   text-decoration: underline;
@@ -180,8 +190,10 @@ sup{
 }
 .modal-content {
   display: inherit;
-  background-color: #fefefe;
-  margin: 40% auto; 
+  background-color: #d8efef;
+  position: relative;
+  top: 40%;
+  margin: auto; 
   padding: 3%;
   border: 3px solid #d7232a;
   width: 80%; 
