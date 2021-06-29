@@ -8,6 +8,7 @@ var index: Array<string> = ['Curarsi senza documenti', 'Burocrazia portami via',
 function focus(id: string) {
   $('#'+id).css({fill: '#eb836a'});
   $('#chap'+id).css({backgroundColor: '#eb836a', fontWeight: 'bold'})
+  $('#chap'+id).animate({marginTop: '-4%'}, 200);
 }
 function defocus(id: string){
     /*if(id == '0'){
@@ -17,6 +18,7 @@ function defocus(id: string){
     }*/
     $('#'+id).css({fill: '#d7232a'});
     $('#chap'+id).css({backgroundColor: '#d7232a',  fontWeight: 'normal'});
+    $('#chap'+id).animate({marginTop: '0%'}, 200);
 }
 
 for (let i = 0; i < logoIndex.length; i++) {
