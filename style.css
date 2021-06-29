@@ -39,8 +39,9 @@ body{
   flex-direction: column;
 }
 #home{
-  margin: 3%;
+  padding: 3%;
   font-style: italic;
+  height: 90vh;
 }
 
 .chap, .logoBack{
@@ -91,6 +92,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 3;
+  height: 10vh;
   }
 
 .navPoint{
@@ -100,6 +102,8 @@ nav {
   width: 25%;
   padding: 1.8% 0;
   text-align: center;
+  font-variant: small-caps;
+ 
 }
 svg#up{
   width: 5%;

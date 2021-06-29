@@ -38,13 +38,13 @@ function show(id: string){
   //pezzi logo uno per volta
   $('#'+id+', #chap'+id).fadeIn(3000);
   //pezzi logo già presenti si illuminano
-  $('#chap'+id).css({'animation': 'load 3s'});
-  //$('#chap'+id).fadeIn(3000);
+  //$('#chap'+id).css({'animation': 'load 3s'});
+  $('#chap'+id).fadeIn(3000);
 }
 //$('#up, .navPoint, .chap').hide();
 $('#up, .navPoint').hide();
 $('.viz').find('iframe:nth-of-type(2)').hide();
-$('circle').css({fill: '#d8efef'});
+//$('circle').css({fill: '#d8efef'});
 //show and hide notes
 $('.close').click(function(){$(this).parent().parent().fadeOut()});
 $('.note').click(function(){$(this).next().fadeIn()});
