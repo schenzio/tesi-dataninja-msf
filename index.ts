@@ -3,12 +3,18 @@ import './style.css';
 
 var logoIndex: HTMLCollection = document.getElementsByClassName('chap');
 var index: Array<string> = ['curarsi senza documenti', 'Burocrazia portami via', 'Salute universale ma...', 'E adesso?'];
+var onHome:boolean = true;
 
 
 function focus(id: string) {
   $('#'+id).css({fill: '#eb836a'});
   $('#chap'+id).css({backgroundColor: '#eb836a', fontWeight: 'bold'})
-  $('#chap'+id).animate({marginTop: '-4%'}, 200);
+  if(onHome){
+    $('#chap'+id).animate({marginTop: '-4%'}, 200);
+  } else {
+    $('#chap'+id).animate({paddingTop: '4%', marginBottom: '-4%'}, 200);
+  }
+
 }
 function defocus(id: string){
     /*if(id == '0'){
@@ -18,7 +24,8 @@ function defocus(id: string){
     }*/
     $('#'+id).css({fill: '#d7232a'});
     $('#chap'+id).css({backgroundColor: '#d7232a',  fontWeight: 'normal'});
-    $('#chap'+id).animate({marginTop: '0%'}, 200);
+    $('#chap'+id).animate({paddingTop: '1.8%', margin: '0%'}, 200);
+  
 }
 
 for (let i = 0; i < logoIndex.length; i++) {
@@ -88,16 +95,16 @@ $(document).on("scroll", function() {
   var s0: number = homeH +($("#section0").height());
   var s1: number = s0 +($("#section1").height());
   var s2: number = s1 +($("#section2").height());
-  var s3: number = s2 + ($("#section3").height());
+ // var s3: number = s2 + ($("#section3").height());
   let pxScrolled = $(document).scrollTop();
 
   if(pxScrolled > homeH){
+    onHome = false;
     $('#up').show();
     $('#s0').css({fill: '#d8efef'});
     if(pxScrolled <= s0){
       $(".logoBack").css({fill: '#d7232a'});
       $('#s0').css({fill: '#eb836a'});
-     
     }
     else if (pxScrolled>s0 && pxScrolled<= s1) {
       $(".logoBack").css({fill: '#d7232a'});
@@ -112,6 +119,7 @@ $(document).on("scroll", function() {
       $('#s3').css({fill: '#eb836a'});
     }   
   } else {
+    onHome=true;
     $('#up').hide();
     $(".logoBack").css({fill: '#d7232a'});
   }; 
