@@ -1,20 +1,62 @@
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
+ /* #logo{
+    padding-left: 5%;
+    padding-right: 10%
+  }
+  #title{
+    padding-top: 20%;
+    padding-right: 5%;
+  }*/
   .navPoint {
+    font-size: 0.8em;
+  }  
+  section{  
+    padding-right: 0%;
+  }
+  h2{
+    font-size: 1.6em;
+  }
+  p{
+    font-size: 0.9em;
+  }/*
+  #logoBackground{
+    display: none;
+  }*/
+}
+
+@media screen and (min-width: 480px) {
+  section{  
+    padding-right: 10%;
+  }
+  h2{
+    font-size: 2em;
+  }
+  p{
     font-size: 1em;
   }
-  h2{
-    font-size: 1.8em;
-  }
+  .navPoint {
+    font-size: 1em;
+  }/*
+  #logoBackground{
+    display: visible;
+  }*/
 }
-@media screen and (min-width: 480px) {
 
-}
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
+  section{  
+    padding-right: 20%;
+  }
+  h2{
+    font-size: 2.2em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+  #title, #logo{
+    padding: 5%;
+  }
   .navPoint {
     font-size: 1.5em;
-  }
-  h2{
-    font-size: 2.3em;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -37,13 +79,23 @@ body{
 #app-container{
   display: flex;
   flex-direction: column;
+ /* background-image: url("https://github.com/schenzio/img_msf_dataninja/blob/main/documenti%20(per%20home).jpeg?raw=true");*/
 }
 #home{
-  padding: 3%;
   font-style: italic;
   height: 90vh;
 }
 
+#home svg{
+  position: absolute;
+  width: 100%;
+}
+svg#logo{
+  z-index: 1;
+}
+svg#title{
+  z-index: 0;
+}
 .chap, .logoBack{
   fill:#d7232a;
   
@@ -51,7 +103,6 @@ body{
 h2{
   font-family: inherit;
   margin-top: 3.125rem;
-  font-size: 2.1875rem;
   padding-bottom: .625rem;
   position: relative;
 }
@@ -69,7 +120,7 @@ h2::after {
   fill:#dc3e44;
 }
 
-text#title{
+text#mainTitle{
   font-size: 5.3em;
   
 }
@@ -81,7 +132,6 @@ div#guide {
   margin-top: 3%;
   margin-left: 3%;
   position: relative;
-
   font-size: 1.4em;
 }
 nav {
@@ -105,6 +155,13 @@ nav {
   text-align: center;
   font-variant: small-caps;
  
+}
+#title{
+  position: relative;
+}
+#title{
+  position: absolute;
+  z-index: 500;
 }
 svg#up{
   width: 5%;
@@ -135,14 +192,14 @@ section{
   z-index: 2;
   padding-top: 8%;
   /*padding-left: 20%;*/
-  padding-right: 20%;
+
 }
 p{
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
   line-height: 1.6em;
   letter-spacing: .0375rem;
-  font-size: 1.1em;
+
 }
 
 .viz{
