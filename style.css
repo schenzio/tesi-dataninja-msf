@@ -1,12 +1,13 @@
 @media screen and (min-width: 280px) {
- /* #logo{
-    padding-left: 5%;
-    padding-right: 10%
+  #logo{
+    width: 85%;
+    margin-top: 14%;
+    margin-left: 7%;
   }
   #title{
-    padding-top: 20%;
-    padding-right: 5%;
-  }*/
+    margin: 2% auto;
+    text-align: center;
+  }
   .navPoint {
     font-size: 0.8em;
   }  
@@ -18,10 +19,14 @@
   }
   p{
     font-size: 0.9em;
-  }/*
+  }
   #logoBackground{
-    display: none;
-  }*/
+    width: 12%;
+  }
+  #textColumn{
+    width: 84%;
+  }
+
 }
 
 @media screen and (min-width: 480px) {
@@ -36,13 +41,33 @@
   }
   .navPoint {
     font-size: 1em;
-  }/*
+  }
   #logoBackground{
-    display: visible;
-  }*/
+    width: 16%;
+  }
+  #textColumn{
+    width: 80%;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 780px) {
+  #logo{
+    margin: 0%;
+    width: 40%;
+  }
+  #title{
+    margin: 0;
+    position: relative;
+    top: -30%;
+    left: 25%;
+    text-align: left;
+  }
+  #title h1{
+    font-size: 4.2em;
+  }
+  #title h3{
+    font-size: 3.5em;
+  }
   section{  
     padding-right: 20%;
   }
@@ -52,14 +77,12 @@
   p {
     font-size: 1.1em;
   }
-  #title, #logo{
-    padding: 5%;
-  }
   .navPoint {
     font-size: 1.5em;
   }
 }
 @media screen and (min-width: 1024px) {
+
 }
 
 html{
@@ -79,23 +102,39 @@ body{
 #app-container{
   display: flex;
   flex-direction: column;
- /* background-image: url("https://github.com/schenzio/img_msf_dataninja/blob/main/documenti%20(per%20home).jpeg?raw=true");*/
+
+ 
 }
 #home{
   font-style: italic;
   height: 90vh;
+  padding: 5%;
+  background-image: url("https://github.com/schenzio/img_msf_dataninja/blob/main/documenti%20(per%20home)%20BN.jpeg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  backface-visibility: 0.8;
 }
 
-#home svg{
-  position: absolute;
-  width: 100%;
-}
+
 svg#logo{
   z-index: 1;
+
 }
-svg#title{
+#title{
+  width: 75%;
+  font-variant: small-caps;
   z-index: 0;
+  color: white;
 }
+h1::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #f33030;
+}
+
 .chap, .logoBack{
   fill:#d7232a;
   
@@ -120,14 +159,6 @@ h2::after {
   fill:#dc3e44;
 }
 
-text#mainTitle{
-  font-size: 5.3em;
-  
-}
-text{
-  font-size:3.8em;
-  font-variant: small-caps;
-}
 div#guide {
   margin-top: 3%;
   margin-left: 3%;
@@ -156,13 +187,7 @@ nav {
   font-variant: small-caps;
  
 }
-#title{
-  position: relative;
-}
-#title{
-  position: absolute;
-  z-index: 500;
-}
+
 svg#up{
   width: 5%;
   fill:hsl(358, 94%, 19%);
@@ -181,9 +206,7 @@ svg#up:hover{
 #scroll-story{
   box-sizing: border-box;
 }
-#textColumn{
-  width: 80%;
-}
+
 #scroll-story:after {
   display: table;
   clear: both;
@@ -212,7 +235,7 @@ p{
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 20vh;
-  width: 16%;
+
   padding: 1.8%;
   z-index: 1;
 }

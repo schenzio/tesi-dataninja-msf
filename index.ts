@@ -51,7 +51,7 @@ function show(id: string){
   $('#chap'+id).fadeIn(3000);
 }
 //$('#up, .navPoint, .chap').hide();
-$('#up, .navPoint').hide();
+$('#up').hide();
 $('.viz').find('iframe:nth-of-type(2)').hide();
 //$('circle').css({fill: '#d8efef'});
 //show and hide notes
@@ -83,10 +83,11 @@ $(document).ready(function(){
   //$('.chap').css({opacity: 0});
   //$('#0').css({'animation': 'load 1s'});
   //$('#chap0').animate({opacity: 1}, 4000);
-  show('0');
-  setTimeout(() => show('1'), 3000);
-  setTimeout(() => show('2'), 6000);
-  setTimeout(() => show('3'), 9000);
+  focus('0');
+  setTimeout(() => {defocus('0'), focus('1')}, 3000);
+  setTimeout(() => {defocus('1'), focus('2')}, 6000);
+  setTimeout(() => {defocus('2'), focus('3')}, 9000);
+  setTimeout(() => {defocus('3')}, 12000);
   //$('#guide').animate({left: '10%'});
   });
 
