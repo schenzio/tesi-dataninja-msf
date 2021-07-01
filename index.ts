@@ -2,7 +2,7 @@ import $ from 'jquery';
 import './style.css';
 
 var logoIndex: HTMLCollection = document.getElementsByClassName('chap');
-var index: Array<string> = ['Curarsi senza documenti', 'Tamponi impossibili', 'Salute universale ma...', 'E adesso?'];
+var index: Array<string> = ['Curarsi senza documenti', 'Covid a ostacoli', 'Salute universale ma...', 'E adesso?'];
 var onHome:boolean = true;
 
 
