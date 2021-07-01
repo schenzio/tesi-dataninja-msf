@@ -48,13 +48,12 @@ function show(id: string){
   //pezzi logo già presenti si illuminano
   $('#chap'+id).fadeIn(3000);
 }*/
-$('#up').hide();
+$('#up, .E-Rviz').hide();
 $('circle').css({'fill': 'transparent'});
-$('.viz').find('iframe:nth-of-type(2)').hide();
-$('#s1').css({fill: 'green'});
+$(".L").attr('checked', 'true');
 //show and hide notes
 $('.close').click(function(){$(this).parent().parent().fadeOut()});
-$('.note').click(function(){$(this).next().fadeIn()});
+$('.note').click(function(){$(this).parent().next('.modal').fadeIn()});
 
 //slide viz
 $("input[type=radio]").change(function(){
@@ -64,13 +63,13 @@ $("input[type=radio]").change(function(){
     let viz = $(this).parent().next();
     switch(this.className){
       case "L": {
-        viz.find('iframe:nth-of-type(2)').fadeOut(300);
-        viz.find('iframe:nth-of-type(1)').fadeIn(300);
+        viz.find('.E-Rviz').fadeOut(300);
+        viz.find('.Lviz').fadeIn(300);
       }
       break;
       case "E-R": {
-        viz.find('iframe:nth-of-type(1)').fadeOut(300);
-        viz.find('iframe:nth-of-type(2)').fadeIn(300);
+        viz.find('.Lviz').fadeOut(300);
+        viz.find('.E-Rviz').fadeIn(300);
       } 
       break;
     }

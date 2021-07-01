@@ -228,6 +228,20 @@ p{
   margin-bottom: 5%;
   z-index: 500;
 }
+.viz img{
+  width: 90%;
+}
+.video{
+  display: flex;
+  width: 100%;
+}
+
+.video iframe { 
+  width: 66%;
+  margin: auto;
+}
+
+
 
 #logoBackground{
   position: -webkit-sticky; /* Safari */
@@ -275,9 +289,9 @@ sup{
   display: inherit;
   background-color: #d8efef;
   position: relative;
-  top: 40%;
+  top: 10%;
   margin: auto; 
-  padding: 3%;
+  padding: 4%;
   border: 3px solid #d7232a;
   width: 80%; 
 }
