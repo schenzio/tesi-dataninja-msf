@@ -132,13 +132,13 @@ h1::after {
   content: "";
   display: block;
   height: 1px;
-  background-color: #f33030;
+  background-color: #dc3e44;
 }
 
 .chap, .logoBack{
   fill:#d7232a;
-  
 }
+
 h2{
   font-family: inherit;
   margin-top: 3.125rem;
@@ -155,9 +155,7 @@ h2::after {
   left: 0;
   background-color: #f33030;
 }
-#line{
-  fill:#dc3e44;
-}
+
 
 div#guide {
   margin-top: 3%;

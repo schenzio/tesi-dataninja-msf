@@ -2,7 +2,7 @@ import $ from 'jquery';
 import './style.css';
 
 var logoIndex: HTMLCollection = document.getElementsByClassName('chap');
-var index: Array<string> = ['curarsi senza documenti', 'Burocrazia portami via', 'Salute universale ma...', 'E adesso?'];
+var index: Array<string> = ['Curarsi senza documenti', 'Tamponi impossibili', 'Salute universale ma...', 'E adesso?'];
 var onHome:boolean = true;
 
 
@@ -17,12 +17,11 @@ function focus(id: string) {
 
 }
 function defocus(id: string){
-    /*if(id == '0'){
-      $('#'+id).css({fill: '#d8efef'});
+    if(id =="1"){
+      $('#'+id).css({fill: 'transparent'});
     } else {
       $('#'+id).css({fill: '#d7232a'});
-    }*/
-    $('#'+id).css({fill: '#d7232a'});
+    }
     $('#chap'+id).css({backgroundColor: '#d7232a',  fontWeight: 'normal'});
     $('#chap'+id).animate({paddingTop: '1.8%', margin: '0%'}, 200);
   
@@ -42,18 +41,17 @@ for (let i = 0; i < logoIndex.length; i++) {
     'mouseout',
     () => defocus(logoPart.id),
   );
-}
+}/*
 function show(id: string){
   //pezzi logo uno per volta
   $('#'+id+', #chap'+id).fadeIn(3000);
   //pezzi logo già presenti si illuminano
-  //$('#chap'+id).css({'animation': 'load 3s'});
   $('#chap'+id).fadeIn(3000);
-}
-//$('#up, .navPoint, .chap').hide();
+}*/
 $('#up').hide();
+$('circle').css({'fill': 'transparent'});
 $('.viz').find('iframe:nth-of-type(2)').hide();
-//$('circle').css({fill: '#d8efef'});
+$('#s1').css({fill: 'green'});
 //show and hide notes
 $('.close').click(function(){$(this).parent().parent().fadeOut()});
 $('.note').click(function(){$(this).next().fadeIn()});
@@ -103,8 +101,10 @@ $(document).on("scroll", function() {
     onHome = false;
     $('#up').show();
     $('#s0').css({fill: '#d8efef'});
+   
     if(pxScrolled <= s0){
       $(".logoBack").css({fill: '#d7232a'});
+      $('#s1').css({fill: 'transparent'});
       $('#s0').css({fill: '#eb836a'});
     }
     else if (pxScrolled>s0 && pxScrolled<= s1) {
@@ -113,15 +113,18 @@ $(document).on("scroll", function() {
     }
     else if (pxScrolled>s1 && pxScrolled<= s2) {
       $(".logoBack").css({fill: '#d7232a'});
+      $('#s1').css({fill: 'transparent'});
       $('#s2').css({fill: '#eb836a'});
     } 
     else if (pxScrolled>s2) {
       $(".logoBack").css({fill: '#d7232a'});
+      $('#s1').css({fill: 'transparent'});
       $('#s3').css({fill: '#eb836a'});
     }   
   } else {
     onHome=true;
     $('#up').hide();
     $(".logoBack").css({fill: '#d7232a'});
+    $('#s1').css({fill: 'transparent'});
   }; 
 })
