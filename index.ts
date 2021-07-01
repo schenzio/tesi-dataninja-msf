@@ -41,13 +41,7 @@ for (let i = 0; i < logoIndex.length; i++) {
     'mouseout',
     () => defocus(logoPart.id),
   );
-}/*
-function show(id: string){
-  //pezzi logo uno per volta
-  $('#'+id+', #chap'+id).fadeIn(3000);
-  //pezzi logo già presenti si illuminano
-  $('#chap'+id).fadeIn(3000);
-}*/
+}
 $('#up, .E-Rviz').hide();
 $('circle').css({'fill': 'transparent'});
 $(".L").attr('checked', 'true');

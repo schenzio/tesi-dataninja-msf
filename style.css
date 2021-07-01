@@ -233,15 +233,18 @@ p{
 }
 .video{
   display: flex;
+  width: 66%;
+  margin: 4% auto;
+}
+
+.image-box{
+  display: flex;
+  width: 75%;
+  margin: 4% auto;
+}
+.image-box img{
   width: 100%;
 }
-
-.video iframe { 
-  width: 66%;
-  margin: auto;
-}
-
-
 
 #logoBackground{
   position: -webkit-sticky; /* Safari */
