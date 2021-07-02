@@ -241,7 +241,6 @@ p{
   line-height: 1.6em;
   letter-spacing: .0375rem;
   font-weight: 300;
-
 }
 p a {
   color: #d7232a;
@@ -253,8 +252,8 @@ p a {
   line-height: 1.7em;
   background: #fff;
 }
-.nero {
-  font-weight: 500;
+span.nero {
+  font-weight: 600;
 }
 .rosso {
   font-weight: 500;
