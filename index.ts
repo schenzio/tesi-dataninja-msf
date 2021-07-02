@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import './style.css';
-
 var logoIndex: HTMLCollection = document.getElementsByClassName('chap');
 var index: Array<string> = ['Curarsi senza documenti', 'Covid a ostacoli', 'Salute universale ma...', 'E adesso?'];
 var onHome:boolean = true;
@@ -71,15 +70,11 @@ $("input[type=radio]").change(function(){
 })
 
 $(document).ready(function(){
-  //$('.chap').css({opacity: 0});
-  //$('#0').css({'animation': 'load 1s'});
-  //$('#chap0').animate({opacity: 1}, 4000);
   focus('0');
   setTimeout(() => {defocus('0'), focus('1')}, 3000);
   setTimeout(() => {defocus('1'), focus('2')}, 6000);
   setTimeout(() => {defocus('2'), focus('3')}, 9000);
   setTimeout(() => {defocus('3')}, 12000);
-  //$('#guide').animate({left: '10%'});
   });
 
 $(document).on("scroll", function() {
