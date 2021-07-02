@@ -20,6 +20,9 @@
   h2{
     font-size: 1.6em;
   }
+  .viz h4{
+    font-size: 1.4em;
+  }
   p{
     font-size: 1em;
   }
@@ -44,6 +47,9 @@
   }
   h2{
     font-size: 2em;
+  }
+  .viz h4{
+    font-size: 1.8em;
   }
   .navPoint {
     font-size: 1em;
@@ -83,6 +89,9 @@
   }
   h2{
     font-size: 2.2em;
+  }
+  .viz h4{
+    font-size: 2em;
   }
   p {
     font-size: 1.1em;
@@ -177,7 +186,6 @@ div#guide {
 }
 nav {
   display: flex;
-  /*flex-wrap: wrap;*/
   align-items: left;
   position: -webkit-sticky; /* Safari */
   position: sticky;
@@ -242,8 +250,16 @@ p a {
   margin-bottom: 5%;
   z-index: 500;
 }
+.viz h4{
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
 .viz img{
   width: 90%;
+}
+#origin{
+  padding: 3%;
 }
 .video {
 	height: 0;

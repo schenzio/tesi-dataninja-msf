@@ -82,7 +82,6 @@ $(document).on("scroll", function() {
   var s0: number = homeH +($("#section0").height());
   var s1: number = s0 +($("#section1").height());
   var s2: number = s1 +($("#section2").height());
- // var s3: number = s2 + ($("#section3").height());
   let pxScrolled = $(document).scrollTop();
 
   if(pxScrolled > homeH){
