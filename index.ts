@@ -1,12 +1,11 @@
 import $ from 'jquery';
 import './style.css';
-var logoIndex: HTMLCollection = document.getElementsByClassName('chap');
+
 var index: Array<string> = ['Curarsi senza documenti', 'Covid a ostacoli', 'Salute universale ma...', 'E adesso?'];
 var onHome:boolean = true;
 
 
 function focus(id: string) {
-  $('#'+id).css({fill: '#eb836a'});
   $('#chap'+id).css({backgroundColor: '#eb836a', fontWeight: 'bold'})
   if(onHome){
     $('#chap'+id).animate({marginTop: '-4%'}, 200);
@@ -16,30 +15,16 @@ function focus(id: string) {
 
 }
 function defocus(id: string){
-    if(id =="1"){
-      $('#'+id).css({fill: 'transparent'});
-    } else {
-      $('#'+id).css({fill: '#d7232a'});
-    }
     $('#chap'+id).css({backgroundColor: '#d7232a',  fontWeight: 'normal'});
     $('#chap'+id).animate({paddingTop: '1.8%', margin: '0%'}, 200);
   
 }
 
-for (let i = 0; i < logoIndex.length; i++) {
-  let logoPart = logoIndex[i];
+for (let i = 0; i < index.length; i++) {
   var navChap = $("<a class='navPoint' href='#section"+i+"' id='chap"+i+"'>"+index[i]+"</a>");
   navChap.mouseover(()=>focus(String(i)));
   navChap.mouseout(()=>defocus(String(i)));
   $('nav').append(navChap);
-  logoPart.addEventListener(
-    'mouseover',
-    () => focus(logoPart.id),
-  );
-  logoPart.addEventListener(
-    'mouseout',
-    () => defocus(logoPart.id),
-  );
 }
 $('#up, .E-Rviz').hide();
 $('circle').css({'fill': 'transparent'});
@@ -68,14 +53,6 @@ $("input[type=radio]").change(function(){
     }
   }
 })
-
-$(document).ready(function(){
-  focus('0');
-  setTimeout(() => {defocus('0'), focus('1')}, 3000);
-  setTimeout(() => {defocus('1'), focus('2')}, 6000);
-  setTimeout(() => {defocus('2'), focus('3')}, 9000);
-  setTimeout(() => {defocus('3')}, 12000);
-  });
 
 $(document).on("scroll", function() {
   var homeH: number = ($("#home").height())+($("nav").height());

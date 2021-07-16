@@ -1,9 +1,4 @@
 @media screen and (min-width: 280px) {
-  #logo{
-    width: 85%;
-    margin-top: 14%;
-    margin-left: 7%;
-  }
   #title{
     margin: 2% auto;
     text-align: center;
@@ -14,9 +9,6 @@
   .navPoint, footer li {
     font-size: 0.8em;
   }  
-  section{  
-    padding-right: 0%;
-  }
   h2{
     font-size: 1.6em;
   }
@@ -25,9 +17,6 @@
   }
   p{
     font-size: 1em;
-  }
-  #logoBackground{
-    width: 12%;
   }
   #textColumn{
     width: 84%;
@@ -42,9 +31,6 @@
 }
 
 @media screen and (min-width: 480px) {
-  section{  
-    padding-right: 10%;
-  }
   h2{
     font-size: 2em;
   }
@@ -67,10 +53,6 @@
 }
 
 @media screen and (min-width: 780px) {
-  #logo{
-    margin: 0%;
-    width: 40%;
-  }
   #title{
     margin: 0;
     position: relative;
@@ -83,9 +65,6 @@
   }
   #title h3{
     font-size: 3.5em;
-  }
-  section{  
-    padding-right: 16%;
   }
   h2{
     font-size: 2.2em;
@@ -124,8 +103,6 @@ body{
 #app-container{
   display: flex;
   flex-direction: column;
-
- 
 }
 #home {
   font-style: italic;
@@ -138,10 +115,6 @@ body{
   background-attachment: fixed;
 }
 
-svg#logo{
-  z-index: 1;
-
-}
 #title{
   width: 75%;
   font-variant: small-caps;
@@ -154,10 +127,6 @@ h1::after {
   display: block;
   height: 1px;
   background-color: #dc3e44;
-}
-
-.chap, .logoBack{
-  fill:#d7232a;
 }
 
 h2{
@@ -192,7 +161,6 @@ nav {
   top: 0;
   z-index: 3;
   height: 10vh;
-  
   }
 
 .navPoint{
@@ -218,16 +186,12 @@ svg#up:hover{
   fill:#eb836a;
 }
 /*scroll-story*/
-.column{
-  float:left;
-}
+
 #scroll-story{
   box-sizing: border-box;
 }
-
-#scroll-story:after {
-  display: table;
-  clear: both;
+#textColumn{
+  margin: auto;
 }
 section{
   z-index: 2;
@@ -319,15 +283,6 @@ span.nero {
 }
 .image-box img{
   width: 100%;
-}
-
-#logoBackground{
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 20vh;
-
-  padding: 1.8%;
-  z-index: 1;
 }
 .slider{
   display: flex;
