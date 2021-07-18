@@ -113,11 +113,11 @@ body{
 }
 
 #title{
-  width: 75%;
   font-variant: small-caps;
   color: white;
   margin: auto;
   text-align: center;
+  padding-top: 4%;
 }
 
 h1::after {
